@@ -1,0 +1,10 @@
+body {
+  font-family: Roboto,Helvetica,Arial,sans-serif
+}
+
+.cards-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5em 20em 0 20em;
+}

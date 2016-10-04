@@ -1,0 +1,48 @@
+.card {
+  max-width: 50em;
+  margin: 0 5em;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.card img {
+  max-width: 25em;
+  max-height: 342px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-title span {
+  padding: 0.5em 1em 0.5em 1em;
+}
+
+.card-desc {
+  padding: 0.5em;
+  min-height: 5em;
+}
+
+.ripple-effect{
+  position: absolute;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: white;
+
+
+  animation: ripple-animation 2s;
+}
+
+
+@keyframes ripple-animation {
+    from {
+      transform: scale(1);
+      opacity: 0.4;
+    }
+    to {
+      transform: scale(100);
+      opacity: 0;
+    }
+}
