@@ -29,7 +29,7 @@ header .networks {
   flex-direction: row;
 }
 header .networks img {
-  margin: 0 0.5em 0 0.5em;
+  margin: 0 0.2em 0 0.2em;
   height: 24px;
 }
 
