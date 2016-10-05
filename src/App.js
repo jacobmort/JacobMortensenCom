@@ -3,8 +3,7 @@ import 'normalize.css/normalize.css';
 import './App.css';
 import Header from './Header/Header';
 import Card from './Card/Card';
-import MemoirSS from './images/memoir-ss.png';
-import NescafeSS from './images/nescafe-ss.png';
+import portfolio from './portfolio';
 
 class App extends Component {
   render() {
@@ -12,18 +11,14 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className="cards-section">
-          <Card
-            title="Memoir Landing Page"
-            img={MemoirSS}
-            desc="Signup page for Memoir app to increase user signups"
-            pageLink="https://www.yourmemoir.com"
-            />
-            <Card
-              title="Nescafe Redesign"
-              img={NescafeSS}
-              desc="Rebuild of nescafe.com website.  Built on top of tumblr."
-              pageLink="http://http://www.nescafe.com/"
-              />
+          {portfolio.map(function(project) {
+            return (<Card
+              title={project.title}
+              img={project.img}
+              desc={project.desc}
+              pageLink={project.pageLink}
+              />)
+          })}
         </div>
       </div>
     );

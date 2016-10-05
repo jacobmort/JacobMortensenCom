@@ -2,9 +2,14 @@ body {
   font-family: Roboto,Helvetica,Arial,sans-serif
 }
 
+.App {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
 .cards-section{
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-flow: row wrap;
+  justify-content: space-around;
   margin: 5em 20em 0 20em;
 }

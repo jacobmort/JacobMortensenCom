@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import Ink from 'react-ink';
 import './Card.css';
 import LinkImg from './ic_link_black_24px.svg';
 
@@ -9,7 +10,7 @@ class Card extends Component {
   }
 
   clickLink() {
-    
+
   }
   render() {
     return (
@@ -18,9 +19,8 @@ class Card extends Component {
         <div className="card-title">
           <span>{this.props.title}</span>
           <span>
-          <a href={this.props.pageLink} target="_blank" rel="noopener">
-            <img src={LinkImg} alt="View Page"/>
-          </a>
+            <Ink />
+            <img src={LinkImg} alt="View Page" />
           </span>
         </div>
         <div className="card-desc">
@@ -32,10 +32,10 @@ class Card extends Component {
 }
 
 Card.propTypes = {
-    title: PropTypes.String,
-    desc: PropTypes.String,
-    img: PropTypes.String,
-    pageLink: PropTypes.String
+    title: PropTypes.string.isRequired,
+    desc: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    pageLink: PropTypes.string.isRequired
 }
 
 export default Card;
