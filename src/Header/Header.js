@@ -30,14 +30,16 @@ class Header extends Component {
       <header style={this.state.headerStyle}>
         <div>
             <img className="profile" src={me} alt="myself"/>
-            <h3>Jacob Mortensen</h3>
-            <div>Software Developer</div>
-            <div className="networks">
-              <Ink />
-              <img src={linkedinIcon} alt="see my linkedin"/>
-              <img src={twitterIcon} alt="contact me on twitter"/>
-              <img src={emailIcon} alt="contact me via email"/>
-              <img src={githubIcon} alt="see my github"/>
+            <div>
+              <h3>Jacob Mortensen</h3>
+              <div>Software Developer</div>
+              <div className="networks">
+                <Ink />
+                <img src={linkedinIcon} alt="see my linkedin"/>
+                <img src={twitterIcon} alt="contact me on twitter"/>
+                <img src={emailIcon} alt="contact me via email"/>
+                <img src={githubIcon} alt="see my github"/>
+              </div>
             </div>
             <div className="header-desc"><i>{this.state.headerDesc}</i></div>
         </div>

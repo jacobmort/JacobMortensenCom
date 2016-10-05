@@ -27,6 +27,7 @@ header .profile {
 }
 header .networks {
   flex-direction: row;
+  position: relative;
 }
 header .networks img {
   margin: 0 0.2em 0 0.2em;
