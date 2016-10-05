@@ -1,5 +1,4 @@
 header {
-  display: flex;
   background: #3f51b5;
   width: 100%;
   height: 15em;
@@ -7,6 +6,10 @@ header {
 }
 
 header div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
   margin: auto;
 }
 
@@ -23,10 +26,10 @@ header .profile {
   border-radius: 50%;
 }
 header .networks {
-  display: flex;
-  justify-content: space-around;
+  flex-direction: row;
 }
 header .networks img {
+  margin: 0 0.5em 0 0.5em;
   height: 24px;
 }
 
