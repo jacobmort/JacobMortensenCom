@@ -12,15 +12,26 @@ header div {
 
 header h3 {
   color: white;
+  margin: 0;
 }
 
-header img {
+header div {
+  color:whitesmoke;
+}
+
+header .profile {
   border-radius: 50%;
+}
+header .networks {
+  display: flex;
+  justify-content: space-around;
+}
+header .networks img {
+  height: 24px;
 }
 
 .header-desc {
   font-size: 1.0rem;
-  color:whitesmoke;
   background: rgba(0,0,0,.3);
   position: absolute;
   left: 1em;
