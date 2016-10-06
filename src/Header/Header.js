@@ -31,7 +31,7 @@ class Header extends Component {
   render() {
     return (
       <header style={this.state.headerStyle}>
-        <div>
+        <div className="wrapper">
             <img className="profile" src={me} alt="myself"/>
             <div>
               <h3>Jacob Mortensen</h3>
@@ -51,7 +51,9 @@ class Header extends Component {
                 </span>
               </div>
             </div>
-            <div className="header-desc"><i>{this.state.headerDesc}</i></div>
+            <div className="header-desc">
+              <i>{this.state.headerDesc}</i>
+            </div>
         </div>
       </header>
     );
