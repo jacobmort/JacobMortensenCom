@@ -23,8 +23,12 @@ class Header extends Component {
       headerStyle: headerStyle,
       headerDesc: selectedBackground.desc
     };
+    this.handleClick = this.handleClick.bind(this);
   }
-
+  handleClick(e) {
+    window.location = e.target.parentElement.getAttribute('href');
+  }
+  
   render() {
     return (
       <header style={this.state.headerStyle}>
@@ -33,12 +37,19 @@ class Header extends Component {
             <div>
               <h3>Jacob Mortensen</h3>
               <div>Software Developer</div>
-              <div className="networks">
-                <Ink />
-                <img src={linkedinIcon} alt="see my linkedin"/>
-                <img src={twitterIcon} alt="contact me on twitter"/>
-                <img src={emailIcon} alt="contact me via email"/>
-                <img src={githubIcon} alt="see my github"/>
+              <div className="networks" onClick={this.handleClick}>
+                <span href="https://www.linkedin.com/in/jacob-mortensen-40266a47">
+                  <Ink />
+                  <img src={linkedinIcon} alt="see my linkedin"/>
+                </span>
+                <span href="https://www.twitter.com/jacobmort">
+                  <Ink />
+                  <img src={twitterIcon} alt="contact me on twitter"/>
+                </span>
+                <span href="https://www.github.com/ubien">
+                  <Ink />
+                  <img src={githubIcon} alt="see my github"/>
+                </span>
               </div>
             </div>
             <div className="header-desc"><i>{this.state.headerDesc}</i></div>
