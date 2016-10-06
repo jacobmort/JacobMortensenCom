@@ -14,11 +14,7 @@
   justify-content: space-between;
 }
 
-.card-title span {
-  position: relative;
-}
-
-.card-title span {
+.card-title a {
   padding: 0.5em 1em 0.5em 1em;
 }
 

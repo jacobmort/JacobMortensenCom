@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Ink from 'react-ink';
 import './Header.css';
 import selectBackground from './HeaderBackgrounds';
 
@@ -22,10 +21,6 @@ class Header extends Component {
       headerStyle: headerStyle,
       headerDesc: selectedBackground.desc
     };
-    this.handleClick = this.handleClick.bind(this);
-  }
-  handleClick(e) {
-    window.location = e.target.parentElement.getAttribute('href');
   }
 
   render() {
@@ -36,19 +31,16 @@ class Header extends Component {
             <div>
               <h3>Jacob Mortensen</h3>
               <div>Software Developer</div>
-              <div className="networks" onClick={this.handleClick}>
-                <span href="https://www.linkedin.com/in/jacob-mortensen-40266a47">
-                  <Ink />
+              <div className="networks">
+                <a href="https://www.linkedin.com/in/jacob-mortensen-40266a47">
                   <img src={linkedinIcon} alt="see my linkedin"/>
-                </span>
-                <span href="https://www.twitter.com/jacobmort">
-                  <Ink />
+                </a>
+                <a href="https://www.twitter.com/jacobmort">
                   <img src={twitterIcon} alt="contact me on twitter"/>
-                </span>
-                <span href="https://www.github.com/ubien">
-                  <Ink />
+                </a>
+                <a href="https://www.github.com/ubien">
                   <img src={githubIcon} alt="see my github"/>
-                </span>
+                </a>
               </div>
             </div>
             <div className="header-desc">
