@@ -26,10 +26,12 @@ class Card extends Component {
         <div className="card-desc">
           {this.props.desc}
         </div>
-        <div className="tech">
-          {this.props.tech.map(function(techImg) {
+        <div className="platforms">
+          {this.props.platforms.map((platform) => {
             return(
-              <img key={techImg} src={techImg} alt="tech stack"/>
+              <a key={platform.alt} href={platform.link}>
+                <img src={platform.img} alt={platform.alt}/>
+              </a>
             )
           })}
         </div>
@@ -43,7 +45,7 @@ Card.propTypes = {
     desc: PropTypes.string.isRequired,
     img: PropTypes.string.isRequired,
     pageLink: PropTypes.string.isRequired,
-    tech: PropTypes.array.isRequired
+    platforms: PropTypes.array.isRequired
 }
 
 export default Card;

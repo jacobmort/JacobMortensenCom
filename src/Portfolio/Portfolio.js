@@ -35,54 +35,186 @@ import swarmIcon from './images/frameworks/swarm.png';
 import tumblrIcon from './images/frameworks/tumblr_logo_blue-white_transparent-32.png';
 import twitterIcon from './images/frameworks/Twitter_Logo_Blue.svg';
 
+const platforms = {
+  "android": {
+    img: androidIcon,
+    link: "https://developer.android.com/index.html",
+    alt: "Android"
+  }, "aws": {
+    img: awsIcon,
+    link: "https://aws.amazon.com/",
+    alt: "Amazon Web Services"
+  }, "backbone": {
+    img: backboneIcon,
+    link: "http://backbonejs.org/",
+    alt: "Backbone JS"
+  }, "browserify": {
+    img: browserifyIcon,
+    link: "http://browserify.org/",
+    alt: "Browserify"
+  }, "bootstrap":{
+    img: bootstrapIcon,
+    link: "http://getbootstrap.com/",
+    alt: "Bootstrap"
+  }, "dropbox": {
+    img: dropboxIcon,
+    link: "https://www.dropbox.com/developers",
+    alt: "Dropbox"
+  }, "facebook": {
+    img: facebookIcon,
+    link: "https://developers.facebook.com/",
+    alt: "Facebook"
+  }, "feedly": {
+    img: feedlyIcon,
+    link: "https://developer.feedly.com/",
+    alt: "Feedly"
+  }, "firebase": {
+    img: firebaseIcon,
+    link: "https://firebase.google.com/",
+    alt: "Firebase"
+  }, "glass": {
+    img: glassIcon,
+    link: "https://developers.google.com/glass/",
+    alt: "Google Glass"
+  }, "gae": {
+    img: gaeIcon,
+    link: "https://cloud.google.com/appengine/",
+    alt: "Google App Engine"
+  }, "googleMaps": {
+    img: googleMapsIcon,
+    link: "https://developers.google.com/maps/",
+    alt: "Google Maps"
+  }, "googlePhotos": {
+    img: googlePhotosIcon,
+    link: "https://photos.google.com/",
+    alt: "Google Photos"
+  }, "googlePlay": {
+    img: googlePlayServicesIcon,
+    link: "https://developers.google.com/android/guides/overview",
+    alt: "Google Play Services"
+  }, "gulp": {
+    img: gulpIcon,
+    link: "http://gulpjs.com/",
+    alt: "Gulp JS"
+  }, "handlebars": {
+    img: handlebarsIcon,
+    link: "http://handlebarsjs.com/",
+    alt: "Handlebars JS"
+  }, "ibeacon": {
+    img: ibeaconIcon,
+    link: "http://estimote.com/",
+    alt: "iBeacons"
+  }, "instagram": {
+    img: instagramIcon,
+    link: "https://www.instagram.com/developer/",
+    alt: "Instagram"
+  }, "muzei": {
+    img: muzeiIcon,
+    link: "https://github.com/romannurik/muzei/wiki/API",
+    alt: "Muzei"
+  }, "modernizr": {
+    img: modernizerIcon,
+    link: "https://modernizr.com/",
+    alt: "Modernizr"
+  }, "python": {
+    img: pythonIcon,
+    link: "https://www.python.org/",
+    alt: "Python"
+  }, "require": {
+    img: requireIcon,
+    link: "http://requirejs.org/",
+    alt: "Require JS"
+  }, "ruby": {
+    img: rubyIcon,
+    link: "http://rubyonrails.org/",
+    alt: "Ruby on Rails"
+  }, "sass": {
+    img: sassIcon,
+    link: "http://sass-lang.com/",
+    alt: "Sass"
+  }, "swarm": {
+    img: swarmIcon,
+    link: "https://developer.foursquare.com",
+    alt: "Swarm"
+  }, "tumblr": {
+    img: tumblrIcon,
+    link: "https://www.tumblr.com/developers",
+    alt: "Tumblr"
+  }, "twitter": {
+    img: twitterIcon,
+    link: "https://dev.twitter.com/",
+    alt: "Twitter"
+  }
+};
+
+
+
 const portfolio = [{
   title: "Memoir Landing Page",
   img: MemoirSS,
   desc: "Signup page for Memoir app to increase user signups",
   pageLink: "https://www.yourmemoir.com",
-  tech: [rubyIcon, awsIcon, twitterIcon, facebookIcon, instagramIcon, dropboxIcon, tumblrIcon, swarmIcon, bootstrapIcon]
+  platforms: [
+    platforms.ruby,
+    platforms.aws,
+    platforms.twitter,
+    platforms.facebook,
+    platforms.instagram,
+    platforms.dropbox,
+    platforms.tumblr,
+    platforms.swarm,
+    platforms.bootstrap
+  ]
 },{
   title: "Nescafe Redesign",
   img: NescafeSS,
   desc: "Rebuild of nescafe.com website.  Built on top of tumblr.",
   pageLink: "http://www.nescafe.com/",
-  tech: [backboneIcon, tumblrIcon, bootstrapIcon, sassIcon, requireIcon, handlebarsIcon, modernizerIcon]
+  platforms: [
+    platforms.backbone,
+    platforms.tumblr,
+    platforms.bootstrap,
+    platforms.sass,
+    platforms.require,
+    platforms.handlebars,
+    platforms.modernizr
+  ]
 },{
   title: "MIC Marriot Quiz",
   img: MicSS,
   desc: "Work as lead developer with http://happyfuncorp.com/ to buid interactive quiz site.",
   pageLink: "http://mic.com/marriott-travel-quiz/",
-  tech: [backboneIcon, browserifyIcon, gulpIcon]
+  platforms: [platforms.backbone, platforms.browserify, platforms.gulp]
 },{
   title: "ASK Brooklyn Museum",
   img: askBrooklyn,
   desc: "Port IOS app to Android.",
   pageLink: "https://play.google.com/store/apps/details?id=porqueno.streetcleanpark&hl=en",
-  tech: [androidIcon, ibeaconIcon, googlePlayServicesIcon]
+  platforms: [platforms.android, platforms.ibeacon, platforms.googlePlay]
 },{
   title: "SF Street Clean Park",
   img: StreetCleanPark,
   desc: "Android app to avoid parking tickets from street cleaning in San Francisco.",
   pageLink: "https://play.google.com/store/apps/details?id=porqueno.streetcleanpark&hl=en",
-  tech: [androidIcon, firebaseIcon, googleMapsIcon, googlePlayServicesIcon]
+  platforms: [platforms.android, platforms.firebase, platforms.googleMaps, platforms.googlePlay]
 },{
   title: "Muzei Extension for Google Photos",
   img: MuzeiPhotos,
   desc: "Android app to add Google Photos as a source to the Muzei App.",
   pageLink: "https://play.google.com/store/apps/details?id=porqueno.muzeigooglephotos&hl=en",
-  tech: [androidIcon, googlePhotosIcon, muzeiIcon, googlePlayServicesIcon]
+  platforms: [platforms.android, platforms.googlePhotos, platforms.muzei, platforms.googlePlay]
 },{
   title: "StenoSpeak",
   img: StenoSS,
   desc: "Turn typed stenography into spoken words in real time.  Built during NYU ABILITY Technology Hackathon and won 2nd place.",
   pageLink: "http://devpost.com/software/stenospeak-for-android",
-  tech: [androidIcon]
+  platforms: [platforms.android]
 },{
   title: "Feedly Glassware",
   img: FeedlyGlassSS,
   desc: "Google Glass application for Feedly RSS reader.",
   pageLink: "https://feedly-glass.appspot.com/",
-  tech: [glassIcon, pythonIcon, feedlyIcon, gaeIcon]
+  platforms: [platforms.glass, platforms.python, platforms.feedly, platforms.gae]
 }]
 
 export default portfolio;

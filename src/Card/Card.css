@@ -23,16 +23,16 @@
 }
 
 .card-desc {
-  padding: 0.5em;
+  padding: 0.5em 0.5em 0 0.5em;
   min-height: 5em;
 }
 
-.tech {
+.platforms {
   display: flex;
   justify-content: center;
 }
 
-.tech img {
+.platforms img {
   margin: 0 0.25em 1em 0.25em;
   max-height: 32px;
 }

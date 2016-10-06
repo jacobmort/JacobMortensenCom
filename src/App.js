@@ -11,14 +11,14 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className="cards-section">
-          {Portfolio.map(function(project) {
+          {Portfolio.map((project) => {
             return (<Card
               key={project.title}
               title={project.title}
               img={project.img}
               desc={project.desc}
               pageLink={project.pageLink}
-              tech={project.tech}
+              platforms={project.platforms}
               />)
           })}
         </div>
