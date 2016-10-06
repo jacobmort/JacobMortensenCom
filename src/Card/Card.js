@@ -9,8 +9,8 @@ class Card extends Component {
     this.clickLink = this.clickLink.bind(this);
   }
 
-  clickLink() {
-
+  clickLink(e) {
+    window.location = e.target.parentElement.getAttribute('href');
   }
   render() {
     return (
@@ -18,7 +18,7 @@ class Card extends Component {
         <img src={this.props.img} alt="screenshot" />
         <div className="card-title">
           <span>{this.props.title}</span>
-          <span>
+          <span href={this.props.pageLink} onClick={this.clickLink}>
             <Ink />
             <img src={LinkImg} alt="View Page" />
           </span>

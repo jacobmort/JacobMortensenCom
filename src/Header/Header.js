@@ -4,7 +4,6 @@ import './Header.css';
 import HeaderBackgrounds from './HeaderBackgrounds';
 
 import me from './images/me.png';
-import emailIcon from './images/ic_email_white_24px.svg';
 import twitterIcon from './images/twitter-icon.png';
 import linkedinIcon from './images/linked-in-icon.png';
 import githubIcon from './images/GitHub-Mark-Light-32px.png'
@@ -28,7 +27,7 @@ class Header extends Component {
   handleClick(e) {
     window.location = e.target.parentElement.getAttribute('href');
   }
-  
+
   render() {
     return (
       <header style={this.state.headerStyle}>
