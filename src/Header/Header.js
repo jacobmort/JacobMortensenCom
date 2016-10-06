@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Ink from 'react-ink';
 import './Header.css';
-import HeaderBackgrounds from './HeaderBackgrounds';
+import selectBackground from './HeaderBackgrounds';
 
 import me from './images/me.png';
 import twitterIcon from './images/twitter-icon.png';
@@ -11,7 +11,7 @@ import githubIcon from './images/GitHub-Mark-Light-32px.png'
 class Header extends Component {
   constructor(props) {
     super();
-    const selectedBackground = HeaderBackgrounds[0];
+    const selectedBackground = selectBackground();
     const headerStyle = {
       background: `url(${selectedBackground.img})`,
       backgroundPosition: "center fixed",

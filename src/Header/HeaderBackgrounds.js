@@ -1,5 +1,5 @@
-import svartifoss from './images/svartifoss.png';
-import peyto from './images/peyto.png';
+import peyto from './images/backgrounds/peyto.png';
+import parker from './images/backgrounds/parker-ridge.png';
 
 const HeaderBackgrounds = [
   {
@@ -7,9 +7,14 @@ const HeaderBackgrounds = [
     desc: "Peyto Lake, Canadian Rockies"
   },
   {
-    img: svartifoss,
-    desc: "Svartifoss- Iceland"
+    img: parker,
+    desc: "Parker Ridge Trail, Canadian Rockies"
   }
 ];
 
-export default HeaderBackgrounds;
+function selectBackground() {
+  const idx = Math.floor(Math.random()*HeaderBackgrounds.length);
+  return HeaderBackgrounds[idx];
+}
+
+export default selectBackground;
