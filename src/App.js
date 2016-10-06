@@ -18,6 +18,7 @@ class App extends Component {
               img={project.img}
               desc={project.desc}
               pageLink={project.pageLink}
+              tech={project.tech}
               />)
           })}
         </div>
