@@ -24,7 +24,7 @@ const portfolio = [{
   title: "SF Street Clean Park",
   img: StreetCleanPark,
   desc: "Android app to avoid parking tickets from street cleaning in San Francisco.",
-  pageLink: "https://play.google.com/store/apps/details?id:porqueno.streetcleanpark&hl:en"
+  pageLink: "https://play.google.com/store/apps/details?id=porqueno.streetcleanpark&hl=en"
 },{
   title: "Muzei Extension for Google Photos",
   img: MuzeiPhotos,
