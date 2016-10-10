@@ -26,7 +26,7 @@ class Card extends Component {
     });
     setTimeout(() => {
        this.setState(Object.assign({}, DEFAULT_STATE));
-    },1000);
+    }, 950);
   }
 
   render() {
@@ -34,7 +34,7 @@ class Card extends Component {
     const rippleStyle = {
       top: this.state.yPos - (this.state.containerHeight),
       left: this.state.xPos - (this.state.containerWidth),
-      background: this.state.animating ? "red" : "#FFFFFF"
+      background: this.state.animating ? "red" : "white"
     }
 
     return (
