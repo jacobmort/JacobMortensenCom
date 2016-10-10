@@ -20,8 +20,8 @@ class Card extends Component {
     this.setState({
       containerHeight: e.target.height,
       containerWidth: e.target.width,
-      xPos: e.pageX - e.target.offsetWidth,
-      yPos: e.pageY - e.target.offsetHeight,
+      xPos: e.pageX,
+      yPos: e.pageY,
       animating: true
     });
     setTimeout(() => {
@@ -32,8 +32,8 @@ class Card extends Component {
   render() {
     const rippleClass = this.state.animating ? "ripple ripple-effect" : "ripple";
     const rippleStyle = {
-      top: this.state.yPos - (this.state.containerHeight/2),
-      left: this.state.xPos - (this.state.containerWidth/2),
+      top: this.state.yPos - (this.state.containerHeight),
+      left: this.state.xPos - (this.state.containerWidth),
       background: this.state.animating ? "red" : "#FFFFFF"
     }
 
