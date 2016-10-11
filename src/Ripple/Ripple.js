@@ -30,7 +30,8 @@ class Ripple extends Component {
       left: this.props.xPos - (this.props.containerWidth),
       width: this.props.rippleWidth ? this.props.rippleWidth : this.props.containerWidth * 2,
       height: this.props.rippleHeight ? this.props.rippleHeight : this.props.containerHeight * 2,
-      background: this.state.animating ? this.props.color : "rgba(0,0,0,0)"
+      background: this.state.animating ? this.props.color : "rgba(0,0,0,0)",
+      display: this.state.animating ? "block" : "none"
     }
     return (
       <span style={rippleStyle} className={rippleClass}></span>
