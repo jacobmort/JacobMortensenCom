@@ -42,9 +42,8 @@ header .networks img {
 }
 
 .header-desc {
-  position: absolute;
-  left: 0;
-  top: 13em;
+  margin-top: -25px;
+  margin-right: auto;
 }
 
 .header-desc i {

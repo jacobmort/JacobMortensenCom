@@ -78,11 +78,11 @@ class Header extends Component {
                     </a>
                   )
                 })}
-              </div>
             </div>
-            <div className="header-desc">
-              <i>{this.state.headerDesc}</i>
-            </div>
+          </div>
+          <div className="header-desc">
+            <i>{this.state.headerDesc}</i>
+          </div>
         </div>
       </header>
     );

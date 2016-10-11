@@ -40,9 +40,7 @@ class Card extends Component {
             <img src={LinkImg} alt="View Page" />
           </a>
         </div>
-        <div className="card-desc">
-          {this.props.desc}
-        </div>
+        <div className="card-desc" dangerouslySetInnerHTML={{__html: this.props.desc}} />
         <div className="platforms">
           {this.props.platforms.map((platform) => {
             return(

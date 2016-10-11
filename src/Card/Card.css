@@ -24,6 +24,10 @@
   min-height: 5em;
 }
 
+.card-desc a {
+  text-decoration: none;
+}
+
 .platforms {
   display: flex;
   justify-content: center;

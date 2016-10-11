@@ -150,9 +150,9 @@ const platforms = {
 
 
 const portfolio = [{
-  title: "Memoir Landing Page",
+  title: "Memoir Signup",
   img: MemoirSS,
-  desc: "Signup page for Memoir app to increase user signups",
+  desc: "Work at startup Memoir to build their homepage which includes a signup flow to increase new users.",
   pageLink: "https://www.yourmemoir.com",
   platforms: [
     platforms.ruby,
@@ -168,7 +168,7 @@ const portfolio = [{
 },{
   title: "Nescafe Redesign",
   img: NescafeSS,
-  desc: "Rebuild of nescafe.com website.  Built on top of tumblr.",
+  desc: "Lead developer on a rebuild of Nescafe's website with creative agency <a href=\"https://www.mayday.is/\">Mayday</a>.",
   pageLink: "http://www.nescafe.com/",
   platforms: [
     platforms.backbone,
@@ -182,13 +182,13 @@ const portfolio = [{
 },{
   title: "MIC Marriot Quiz",
   img: MicSS,
-  desc: "Work as lead developer with http://happyfuncorp.com/ to buid interactive quiz site.",
+  desc: "Work as lead developer with <a href=\"http://www.mic.com\">MIC</a> and <a href=\"http://happyfuncorp.com/\">Happy Fun Corp</a> to buid an interactive travel quiz site.",
   pageLink: "http://mic.com/marriott-travel-quiz/",
   platforms: [platforms.backbone, platforms.browserify, platforms.gulp]
 },{
   title: "ASK Brooklyn Museum",
   img: askBrooklyn,
-  desc: "Port IOS app to Android.",
+  desc: "Port the museum's IOS app to Android working as part of a team with <a href=\"http://happyfuncorp.com/\">Happy Fun Corp</a>.",
   pageLink: "https://play.google.com/store/apps/details?id=porqueno.streetcleanpark&hl=en",
   platforms: [platforms.android, platforms.ibeacon, platforms.googlePlay]
 },{
@@ -200,13 +200,13 @@ const portfolio = [{
 },{
   title: "Muzei Extension for Google Photos",
   img: MuzeiPhotos,
-  desc: "Android app to add Google Photos as a source to the Muzei App.",
+  desc: "Android app which adds Google Photos as a source to the wallpaper switching app <a href=\"https://play.google.com/store/apps/details?id=net.nurik.roman.muzei&hl=en\">Muzei</a>.",
   pageLink: "https://play.google.com/store/apps/details?id=porqueno.muzeigooglephotos&hl=en",
   platforms: [platforms.android, platforms.googlePhotos, platforms.muzei, platforms.googlePlay]
 },{
   title: "StenoSpeak",
   img: StenoSS,
-  desc: "Turn typed stenography into spoken words in real time.  Built during NYU ABILITY Technology Hackathon and won 2nd place.",
+  desc: "Turn typed stenography into spoken words in real time.  Built during <a href=\"https://connectability.devpost.com/\">NYU ABILITY Technology Hackathon</a> and won 2nd place.",
   pageLink: "http://devpost.com/software/stenospeak-for-android",
   platforms: [platforms.android]
 },{
