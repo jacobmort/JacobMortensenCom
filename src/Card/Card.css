@@ -27,6 +27,7 @@
 .platforms {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .platforms img {

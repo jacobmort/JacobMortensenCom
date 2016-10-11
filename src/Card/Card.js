@@ -46,7 +46,7 @@ class Card extends Component {
         <div className="platforms">
           {this.props.platforms.map((platform) => {
             return(
-              <a key={platform.alt} href={platform.link}>
+              <a onClick={this.handleClick} key={platform.alt} href={platform.link}>
                 <img src={platform.img} alt={platform.alt}/>
               </a>
             )

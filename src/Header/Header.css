@@ -13,6 +13,10 @@ header .wrapper {
   margin: auto;
 }
 
+header .profile {
+  height: 10em;
+}
+
 header h3 {
   color: white;
   margin: 0;
@@ -29,6 +33,7 @@ header .networks {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top: 0.5em;
 }
 
 header .networks img {
@@ -37,9 +42,9 @@ header .networks img {
 }
 
 .header-desc {
-  width: 100%;
-  font-size: 1.0rem;
-  margin-top: -25px;
+  position: absolute;
+  left: 0;
+  top: 13em;
 }
 
 .header-desc i {
