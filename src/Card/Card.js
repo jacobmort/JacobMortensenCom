@@ -37,7 +37,6 @@ class Card extends Component {
               xPos={this.state.clickXPos}
               yPos={this.state.clickYPos}
             />
-
             <img src={LinkImg} alt="View Page" />
           </a>
         </div>

@@ -65,15 +65,15 @@ class Header extends Component {
               <h3>Jacob Mortensen</h3>
               <div>Software Developer</div>
               <div className="networks">
+                <Ripple
+                  containerWidth={this.state.containerWidth}
+                  containerHeight={this.state.containerHeight}
+                  xPos={this.state.clickXPos}
+                  yPos={this.state.clickYPos}
+                />
                 {NETWORKS.map((network) => {
                   return (
                     <a key={network.href} href={network.href} onClick={this.handleClick}>
-                      <Ripple
-                        containerWidth={this.state.containerWidth}
-                        containerHeight={this.state.containerHeight}
-                        xPos={this.state.clickXPos}
-                        yPos={this.state.clickYPos}
-                      />
                       <img src={network.src} alt={network.alt}/>
                     </a>
                   )
