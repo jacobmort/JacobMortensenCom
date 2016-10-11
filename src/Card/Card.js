@@ -1,49 +1,43 @@
 import React, { Component, PropTypes } from 'react';
 import './Card.css';
+import Ripple from '../Ripple/Ripple';
 import LinkImg from './ic_link_black_24px.svg';
 
-const DEFAULT_STATE = {
-  containerHeight: null,
-  containerWidth: null,
-  xPos: null,
-  yPos: null,
-  animating: false
-}
-
 class Card extends Component {
-  constructor() {
+  constructor(){
     super();
-    this.state = Object.assign({}, DEFAULT_STATE);
     this.handleClick = this.handleClick.bind(this);
+    this.state = {
+      containerHeight: null,
+      containerWidth: null,
+      clickXPos: null,
+      clickYPos: null
+    }
   }
+
   handleClick(e) {
     this.setState({
       containerHeight: e.target.height,
       containerWidth: e.target.width,
-      xPos: e.pageX,
-      yPos: e.pageY,
-      animating: true
+      clickXPos: e.pageX,
+      clickYPos: e.pageY
     });
-    setTimeout(() => {
-       this.setState(Object.assign({}, DEFAULT_STATE));
-    }, 950);
   }
 
   render() {
-    const rippleClass = this.state.animating ? "ripple ripple-effect" : "ripple";
-    const rippleStyle = {
-      top: this.state.yPos - (this.state.containerHeight),
-      left: this.state.xPos - (this.state.containerWidth),
-      background: this.state.animating ? "red" : "white"
-    }
-
     return (
       <div className="card">
         <img src={this.props.img} alt="screenshot" />
         <div className="card-title">
           <span>{this.props.title}</span>
           <a href={this.props.pageLink} onClick={this.handleClick}>
-            <div style={rippleStyle} className={rippleClass}></div>
+            <Ripple
+              containerWidth={this.state.containerWidth}
+              containerHeight={this.state.containerHeight}
+              xPos={this.state.clickXPos}
+              yPos={this.state.clickYPos}
+            />
+
             <img src={LinkImg} alt="View Page" />
           </a>
         </div>
