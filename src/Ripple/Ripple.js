@@ -28,10 +28,12 @@ class Ripple extends Component {
     const rippleStyle = {
       top: this.props.yPos - (this.props.containerHeight),
       left: this.props.xPos - (this.props.containerWidth),
-      background: this.state.animating ? this.props.color : "white"
+      width: this.props.rippleWidth ? this.props.rippleWidth : this.props.containerWidth * 2,
+      height: this.props.rippleHeight ? this.props.rippleHeight : this.props.containerHeight * 2,
+      background: this.state.animating ? this.props.color : "rgba(0,0,0,0)"
     }
     return (
-      <div style={rippleStyle} className={rippleClass}></div>
+      <span style={rippleStyle} className={rippleClass}></span>
     );
   }
 }
@@ -39,6 +41,8 @@ class Ripple extends Component {
 Ripple.propTypes = {
   containerWidth:PropTypes.number,
   containerHeight:PropTypes.number,
+  rippleWidth: PropTypes.number,
+  rippleHeight: PropTypes.number,
   xPos:PropTypes.number,
   yPos:PropTypes.number,
   color: PropTypes.string
