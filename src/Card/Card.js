@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import './Card.css';
-import Ripple from '../Ripple/Ripple';
+import Ripple from 'react-ripple-css';
 import LinkImg from './ic_link_black_24px.svg';
 
 class Card extends Component {
@@ -16,9 +16,10 @@ class Card extends Component {
   }
 
   handleClick(e) {
+    const rect = e.target.getBoundingClientRect();
     this.setState({
-      containerHeight: e.target.height,
-      containerWidth: e.target.width,
+      containerHeight: rect.height,
+      containerWidth: rect.width,
       clickXPos: e.pageX,
       clickYPos: e.pageY
     });
@@ -36,6 +37,7 @@ class Card extends Component {
               containerHeight={this.state.containerHeight}
               xPos={this.state.clickXPos}
               yPos={this.state.clickYPos}
+              color="grey"
             />
             <img src={LinkImg} alt="View Page" />
           </a>

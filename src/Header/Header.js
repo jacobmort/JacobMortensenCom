@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Header.css';
-import Ripple from '../Ripple/Ripple';
+import Ripple from 'react-ripple-css';
 import selectBackground from './HeaderBackgrounds';
 
 import me from './images/me.png';
@@ -46,12 +46,13 @@ class Header extends Component {
   }
 
   handleClick(e) {
+    const rect = e.target.getBoundingClientRect();
     this.setState(
       Object.assign(this.state, {
-          containerHeight: e.target.height,
-          containerWidth: e.target.width,
-          clickXPos: e.pageX,
-          clickYPos: e.pageY
+        containerHeight: rect.height,
+        containerWidth: rect.width,
+        clickXPos: e.pageX,
+        clickYPos: e.pageY
         })
     );
   }
@@ -70,6 +71,7 @@ class Header extends Component {
                   containerHeight={this.state.containerHeight}
                   xPos={this.state.clickXPos}
                   yPos={this.state.clickYPos}
+                  color="grey"
                 />
                 {NETWORKS.map((network) => {
                   return (
