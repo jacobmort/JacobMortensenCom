@@ -27,22 +27,37 @@ const NETWORKS = [
 class Header extends Component {
   constructor(props) {
     super();
+    this.handleClick = this.handleClick.bind(this);
+    this.state = {
+      headerStyle: null,
+      headerDesc: null,
+      containerHeight: null,
+      containerWidth: null,
+      clickXPos: null,
+      clickYPos: null
+    };
+  }
+
+  componentDidMount() {
     const selectedBackground = selectBackground();
+    let background = selectedBackground.img;
+    if (window.matchMedia("(max-width: 640px)").matches) {
+      background = selectedBackground.imgSm
+    }
     const headerStyle = {
-      background: `url(${selectedBackground.img})`,
+      background: `url(${background})`,
       backgroundPosition: "center fixed",
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover"
     };
-    this.handleClick = this.handleClick.bind(this);
-    this.state = {
+    this.setState({
       headerStyle: headerStyle,
       headerDesc: selectedBackground.desc,
       containerHeight: null,
       containerWidth: null,
       clickXPos: null,
       clickYPos: null
-    };
+    });
   }
 
   handleClick(e) {

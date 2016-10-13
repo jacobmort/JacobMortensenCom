@@ -16,7 +16,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "s3cmd del --recursive s3://jacobmortensen.com/static/ && s3cmd del --recursive s3://jacobmortensen.com/favicons/ && s3cmd del s3://jacobmortensen.com/index.html && s3cmd put ./build/* s3://jacobmortensen.com/ --recursive && s3cmd --recursive modify --add-header=\"Cache-Control:public, max-age=31536000\" s3://jacobmortensen.com/static/"
+    "deploy": "s3cmd del --recursive s3://jacobmortensen.com/static/ && s3cmd del --recursive s3://jacobmortensen.com/favicons/ && s3cmd del s3://jacobmortensen.com/index.html && s3cmd put ./build/* s3://jacobmortensen.com/ --recursive && s3cmd --recursive modify --add-header=\"Cache-Control:public, max-age=31536000\" s3://jacobmortensen.com/static/",
+    "resize-backgrounds": "mogrify -path ./src/Header/images/backgrounds/medium/ -filter Triangle -define filter:support=2 -thumbnail 640 -unsharp 0.25x0.25+8+0.065 -dither None -posterize 136 -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace sRGB -strip ./src/Header/images/backgrounds/*"
   },
   "eslintConfig": {
     "extends": "react-app"
