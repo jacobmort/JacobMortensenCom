@@ -16,7 +16,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "s3cmd put ./build/* s3://jacobmortensen.com/ && s3cmd --recursive modify --add-header=\"Cache-Control:public, max-age=31536000\" s3://jacobmortensen.com/static/"
+    "deploy": "s3cmd del --recursive s3://jacobmortensen.com/static/ && s3cmd del --recursive s3://jacobmortensen.com/favicons/ && s3cmd del s3://jacobmortensen.com/index.html && s3cmd put ./build/* s3://jacobmortensen.com/ --recursive && s3cmd --recursive modify --add-header=\"Cache-Control:public, max-age=31536000\" s3://jacobmortensen.com/static/"
   },
   "eslintConfig": {
     "extends": "react-app"
