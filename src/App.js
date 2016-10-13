@@ -4,6 +4,7 @@ import './App.css';
 import Header from './Header/Header';
 import Card from './Card/Card';
 import Portfolio from './Portfolio/Portfolio';
+import Footer from './Footer/Footer';
 
 class App extends Component {
   render() {
@@ -22,6 +23,7 @@ class App extends Component {
               />)
           })}
         </div>
+        <Footer />
       </div>
     );
   }

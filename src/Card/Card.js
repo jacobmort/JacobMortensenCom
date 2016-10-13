@@ -1,28 +1,20 @@
 import React, { Component, PropTypes } from 'react';
 import './Card.css';
 import Ripple from 'react-ripple-css';
+import RippleHelper from '../RippleHelper';
 import LinkImg from './ic_link_black_24px.svg';
 
 class Card extends Component {
   constructor(){
     super();
     this.handleClick = this.handleClick.bind(this);
-    this.state = {
-      containerHeight: null,
-      containerWidth: null,
-      clickXPos: null,
-      clickYPos: null
-    }
+    this.state = RippleHelper.getInitialState();
   }
 
   handleClick(e) {
-    const rect = e.target.getBoundingClientRect();
-    this.setState({
-      containerHeight: rect.height,
-      containerWidth: rect.width,
-      clickXPos: e.pageX,
-      clickYPos: e.pageY
-    });
+    this.setState(
+      Object.assign(this.state, RippleHelper.handleClick(e))
+    );
   }
 
   render() {

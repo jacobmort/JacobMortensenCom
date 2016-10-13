@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Header.css';
 import Ripple from 'react-ripple-css';
+import RippleHelper from '../RippleHelper';
 import selectBackground from './HeaderBackgrounds';
 
 import me from './images/me.png';
@@ -28,14 +29,12 @@ class Header extends Component {
   constructor(props) {
     super();
     this.handleClick = this.handleClick.bind(this);
-    this.state = {
-      headerStyle: null,
-      headerDesc: null,
-      containerHeight: null,
-      containerWidth: null,
-      clickXPos: null,
-      clickYPos: null
-    };
+    this.state =
+      Object.assign({
+          headerStyle: null,
+          headerDesc: null
+        }, RippleHelper.getInitialState()
+      );
   }
 
   componentDidMount() {
@@ -50,25 +49,17 @@ class Header extends Component {
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover"
     };
-    this.setState({
-      headerStyle: headerStyle,
-      headerDesc: selectedBackground.desc,
-      containerHeight: null,
-      containerWidth: null,
-      clickXPos: null,
-      clickYPos: null
-    });
+    this.setState(
+      Object.assign(this.state, {
+        headerStyle: headerStyle,
+        headerDesc: selectedBackground.desc,
+        }
+      ));
   }
 
   handleClick(e) {
-    const rect = e.target.getBoundingClientRect();
     this.setState(
-      Object.assign(this.state, {
-        containerHeight: rect.height,
-        containerWidth: rect.width,
-        clickXPos: e.pageX,
-        clickYPos: e.pageY
-        })
+      Object.assign(this.state, RippleHelper.handleClick(e))
     );
   }
 
@@ -86,7 +77,6 @@ class Header extends Component {
                   containerHeight={this.state.containerHeight}
                   xPos={this.state.clickXPos}
                   yPos={this.state.clickYPos}
-                  color="grey"
                 />
                 {NETWORKS.map((network) => {
                   return (
