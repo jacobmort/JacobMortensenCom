@@ -22,7 +22,8 @@ class Card extends Component {
       <div className="card">
         <img src={this.props.img} alt="screenshot" />
         <div className="card-title">
-          <span>{this.props.title}</span>
+          <span className="name">{this.props.title}</span>
+          <span className="position"><i>{this.props.position}</i></span>
           <a href={this.props.pageLink} onClick={this.handleClick}>
             <Ripple
               containerWidth={this.state.containerWidth}
@@ -52,6 +53,7 @@ class Card extends Component {
 Card.propTypes = {
     title: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired,
+    position: PropTypes.string.isRequired,
     img: PropTypes.string.isRequired,
     pageLink: PropTypes.string.isRequired,
     platforms: PropTypes.array.isRequired

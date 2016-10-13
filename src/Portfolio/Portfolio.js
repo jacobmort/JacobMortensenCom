@@ -147,12 +147,11 @@ const platforms = {
   }
 };
 
-
-
 const portfolio = [{
   title: "Memoir Signup",
   img: MemoirSS,
-  desc: "Work at startup Memoir to build their homepage which includes a signup flow to increase new users.",
+  desc: "Home page for startup Memoir which includes a signup flow to increase new users.",
+  position: "Software engineer",
   pageLink: "https://www.yourmemoir.com",
   platforms: [
     platforms.ruby,
@@ -168,8 +167,9 @@ const portfolio = [{
 },{
   title: "Nescafe Redesign",
   img: NescafeSS,
-  desc: "Lead developer on a rebuild of Nescafe's website with creative agency <a href=\"https://www.mayday.is/\">Mayday</a>.",
+  desc: "Rebuild of Nescafe's website with creative agency <a href=\"https://www.mayday.is/\">Mayday</a>.",
   pageLink: "http://www.nescafe.com/",
+  position: "Lead developer",
   platforms: [
     platforms.backbone,
     platforms.tumblr,
@@ -182,13 +182,15 @@ const portfolio = [{
 },{
   title: "MIC Marriot Quiz",
   img: MicSS,
-  desc: "Work as lead developer with <a href=\"http://www.mic.com\">MIC</a> and <a href=\"http://happyfuncorp.com/\">Happy Fun Corp</a> to buid an interactive travel quiz site.",
+  desc: "Interactive travel quiz website with <a href=\"http://www.mic.com\">MIC</a> and <a href=\"http://happyfuncorp.com/\">Happy Fun Corp</a>.",
+  position: "Lead developer",
   pageLink: "http://mic.com/marriott-travel-quiz/",
   platforms: [platforms.backbone, platforms.browserify, platforms.gulp]
 },{
   title: "ASK Brooklyn Museum",
   img: askBrooklyn,
-  desc: "Port the museum's IOS app to Android working as part of a team with <a href=\"http://happyfuncorp.com/\">Happy Fun Corp</a>.",
+  desc: "Port Brooklyn Museum's IOS app to Android with <a href=\"http://happyfuncorp.com/\">Happy Fun Corp</a>.",
+  position: "Android developer",
   pageLink: "https://play.google.com/store/apps/details?id=porqueno.streetcleanpark&hl=en",
   platforms: [platforms.android, platforms.ibeacon, platforms.googlePlay]
 },{
@@ -196,17 +198,20 @@ const portfolio = [{
   img: StreetCleanPark,
   desc: "Android app to avoid parking tickets from street cleaning in San Francisco.",
   pageLink: "https://play.google.com/store/apps/details?id=porqueno.streetcleanpark&hl=en",
+  position: "Personal",
   platforms: [platforms.android, platforms.firebase, platforms.googleMaps, platforms.googlePlay]
 },{
   title: "Muzei Extension for Google Photos",
   img: MuzeiPhotos,
   desc: "Android app which adds Google Photos as a source to the wallpaper switching app <a href=\"https://play.google.com/store/apps/details?id=net.nurik.roman.muzei&hl=en\">Muzei</a>.",
+  position: "Personal",
   pageLink: "https://play.google.com/store/apps/details?id=porqueno.muzeigooglephotos&hl=en",
   platforms: [platforms.android, platforms.googlePhotos, platforms.muzei, platforms.googlePlay]
 },{
   title: "StenoSpeak",
   img: StenoSS,
   desc: "Turn typed stenography into spoken words in real time.  Built during <a href=\"https://connectability.devpost.com/\">NYU ABILITY Technology Hackathon</a> and won 2nd place.",
+  position: "Hackathon",
   pageLink: "http://devpost.com/software/stenospeak-for-android",
   platforms: [platforms.android]
 },{
@@ -214,6 +219,7 @@ const portfolio = [{
   img: FeedlyGlassSS,
   desc: "Google Glass application for Feedly RSS reader.",
   pageLink: "https://feedly-glass.appspot.com/",
+  position: "Hackathon",
   platforms: [platforms.glass, platforms.python, platforms.feedly, platforms.gae]
 }]
 

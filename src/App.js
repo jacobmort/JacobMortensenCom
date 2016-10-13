@@ -18,6 +18,7 @@ class App extends Component {
               title={project.title}
               img={project.img}
               desc={project.desc}
+              position={project.position}
               pageLink={project.pageLink}
               platforms={project.platforms}
               />)

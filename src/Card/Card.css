@@ -9,13 +9,17 @@
 }
 
 .card-title {
-  font-size: 1.25rem;
   margin-left: 0.5em;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.card-title a {
+.card-title .name {
+  font-size: 1.25rem;
+}
+
+.card-title span, .card-title a {
   padding: 0.5em 1em 0.5em 1em;
 }
 
