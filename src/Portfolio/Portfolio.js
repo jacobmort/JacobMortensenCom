@@ -191,7 +191,7 @@ const portfolio = [{
   img: askBrooklyn,
   desc: "Port Brooklyn Museum's IOS app to Android with <a href=\"http://happyfuncorp.com/\">Happy Fun Corp</a>.",
   position: "Android developer",
-  pageLink: "https://play.google.com/store/apps/details?id=porqueno.streetcleanpark&hl=en",
+  pageLink: "https://play.google.com/store/apps/details?id=ask.brooklynmuseum.org",
   platforms: [platforms.android, platforms.ibeacon, platforms.googlePlay]
 },{
   title: "SF Street Clean Park",
