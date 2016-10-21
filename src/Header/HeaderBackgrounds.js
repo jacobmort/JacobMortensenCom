@@ -36,7 +36,7 @@ const HeaderBackgrounds = [
   {
     img: joshuaTree,
     imgSm: joshuaTreeMed,
-    desc: "Johua Tree National Park"
+    desc: "Joshua Tree National Park"
   }, {
     img: icelandBoat,
     imgSm: icelandBoatMed,
