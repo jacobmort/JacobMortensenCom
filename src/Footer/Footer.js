@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './Footer.css';
 import reactLogo from './React.js_logo.svg';
-import Ripple from 'react-ripple-css';
-import RippleHelper from '../RippleHelper';
+import {Ripple, RippleHelper} from 'react-ripple-css';
 
 class Footer extends Component {
   constructor(props) {

@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import './Card.css';
-import Ripple from 'react-ripple-css';
-import RippleHelper from '../RippleHelper';
+import {Ripple, RippleHelper} from 'react-ripple-css';
 import LinkImg from './ic_link_black_24px.svg';
 
 class Card extends Component {

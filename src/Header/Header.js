@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './Header.css';
-import Ripple from 'react-ripple-css';
-import RippleHelper from '../RippleHelper';
+import {Ripple, RippleHelper} from 'react-ripple-css';
 import selectBackground from './HeaderBackgrounds';
 
 import me from './images/me.png';
