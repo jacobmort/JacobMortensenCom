@@ -18,7 +18,7 @@ const NETWORKS = [
     src: twitterIcon,
     alt: "See my Twitter"
   }, {
-    href: "https://www.github.com/ubien",
+    href: "https://www.github.com/jacobmort",
     src: githubIcon,
     alt: "See my Github"
   }

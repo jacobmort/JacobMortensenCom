@@ -31,7 +31,7 @@ class Footer extends Component {
           <a href="https://facebook.github.io/react/" onClick={this.handleClick}>
             <img src={reactLogo} alt="Facebook React" />
           </a>
-          <a href="https://github.com/ubien/JacobMortensenCom" onClick={this.handleClick}>
+          <a href="https://github.com/jacobmort/JacobMortensenCom" onClick={this.handleClick}>
             <i>source available </i>
           </a>
         </div>
